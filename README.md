@@ -2,6 +2,12 @@
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
+## Install
+
+```bash
+npx nuxi@latest init -t gh:TotalDesign/nuxt-3-template <directory>
+```
+
 ## Setup
 
 Make sure to install the dependencies:
