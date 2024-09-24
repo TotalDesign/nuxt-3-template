@@ -7,14 +7,10 @@ ARG PLATFORM=linux/amd64
 # Stage 1: Build
 FROM --platform=${PLATFORM} node:${NODE_VERSION}-slim AS build
 
-## Configure environment
-ARG NODE_ENV=production
-ENV NODE_ENV=$NODE_ENV
-
 ## Install modules
 WORKDIR /app
 COPY package*.json ./
-RUN npm ci --omit=dev && npm cache clean --force
+RUN npm ci && npm cache clean --force
 
 ## Copy application file
 COPY . ./
