@@ -8,14 +8,15 @@ export default defineNuxtConfig({
     dirs: [
       'composables',
       'stores',
+      'utils',
     ],
   },
   devtools: {
     enabled: false,
   },
   css: [
-    'assets/scss/main.scss',
     'ress/ress.css',
+    'assets/scss/main.scss',
   ],
   compatibilityDate: '2024-11-13',
   vite: {
