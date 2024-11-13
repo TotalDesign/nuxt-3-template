@@ -17,7 +17,7 @@ export default defineNuxtConfig({
     'assets/scss/main.scss',
     'ress/ress.css',
   ],
-  compatibilityDate: '2024-11-03',
+  compatibilityDate: '2024-11-13',
   vite: {
     css: {
       preprocessorOptions: {
