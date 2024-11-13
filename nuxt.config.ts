@@ -1,29 +1,29 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: '2024-04-03',
-  css: [
-    'assets/scss/main.scss',
-    'ress/ress.css',
-  ],
-  devtools: {
-    enabled: false,
-  },
-  imports: {
-    dirs: [
-      'composables',
-      'stores',
-      'utils',
-    ],
-  },
   modules: [
     '@nuxt/test-utils/module',
     '@pinia/nuxt',
   ],
+  imports: {
+    dirs: [
+      'composables',
+      'stores',
+    ],
+  },
+  devtools: {
+    enabled: false,
+  },
+  css: [
+    'assets/scss/main.scss',
+    'ress/ress.css',
+  ],
+  compatibilityDate: '2024-11-03',
   vite: {
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: `@import "./assets/scss/mixins";`,
+          additionalData: `@use "./assets/scss/mixins.scss" as *;`,
+          api: 'modern',
         },
       },
     },
